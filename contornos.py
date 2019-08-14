@@ -40,8 +40,8 @@ def para_extr(SIGNAL, n_para):
     df.sort_values(axis=0, ascending=False, by='amplitude', inplace=True)
     return df[0:n_para]
 
-df_ex=para_extr(SIGNAL, 180)
+df_ex=ani.para_extr(SIGNAL, 20)
 df_ex.reset_index(inplace=True)
 df_ex
 
-ani.ani_start(df_ex, save="neymar_mobile.mp4")
+ani.ani_start(df_ex, save=False)
